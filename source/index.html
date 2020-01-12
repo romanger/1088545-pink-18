@@ -10,12 +10,18 @@
 </head>
 
 <body>
-  <header class="page-header">
+  <header class="page-header page-header--menu-closed">
     <div class="container">
       <a class="page-header__logo logo">
-        <img class="logo__image" src="https://via.placeholder.com/147x40" width="147" height="40" alt="Пинк">
+        <picture class="logo__picture">
+          <source media="(max-width: 660px)" srcset="img/logo-pink-white-mobile.svg" width="75" height="22">
+            <source media="(max-width: 960px)" srcset="img/logo-pink-white-tablet.svg" width="147" height="40">
+              <source media="(min-width: 960px)" srcset="img/logo-pink-white-desktop.svg" width="147" height="40">
+          <img class="logo__image" src="img/logo-pink-white-mobile.svg"  alt="Пинк">
+        </picture>
       </a>
       <nav class="page-header__nav main-nav">
+        <button class="main-nav__toggle"><span class="visually-hidden">Открыть меню</span></button>
         <ul class="main-nav__list">
           <li class="main-nav__item"><a class="main-nav__link">Главная</a></li>
           <li class="main-nav__item"><a class="main-nav__link" href="gallery.html">Фотографии</a></li>
@@ -118,8 +124,10 @@
             </li>
           </ul>
           <ul class="testimonials__slider-nav slider__nav">
-            <li class="slider-nav__item"><button class="slider__button slider__button--next" type="button">Вперед</button></li>
-            <li class="slider-nav__item"><button class="slider__button slider__button--prev" type="button">Назад</button></li>
+            <li class="slider-nav__item"><button class="slider__button slider__button--next"
+                type="button">Вперед</button></li>
+            <li class="slider-nav__item"><button class="slider__button slider__button--prev"
+                type="button">Назад</button></li>
           </ul>
         </div>
       </div>
