@@ -1,0 +1,25 @@
+.button {
+  width: 100%;
+  background: no-repeat;
+  border: none;
+  display: block;
+  padding: 17px 30px;
+
+  &--white-border {
+    border: 3px solid #ffffff;
+    color: #ffffff;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 18px;
+
+    &:hover {
+      background-color: #ffffff;
+      color: @highlight-color;
+    }
+
+    &:active {
+      color: rgba(@highlight-color, 0.3);
+    }
+  }
+}

@@ -1,0 +1,45 @@
+.logo svg{
+    width:75px;
+    height:22px;
+}
+
+.logo:hover path {
+    fill:@highlight-color;
+}
+
+.logo:active path {
+    fill:rgba(#ffffff,0.3);
+}
+
+.logo__tablet {
+    display:none;
+}
+
+.logo__desktop {
+    display:none;
+}
+
+@media (min-width: @tablet-width) {
+    .logo svg {
+        display: block;
+        width: 147px;
+        height: auto;
+      }
+      .logo__mobile {
+          display:none;
+      }
+
+      .logo__tablet {
+        display: inline-block;
+      }
+}
+
+@media (min-width: @desktop-width) {
+    .logo__tablet {
+        display:none;
+     }
+
+     .logo__desktop {
+        display: inline-block;
+     }
+}
